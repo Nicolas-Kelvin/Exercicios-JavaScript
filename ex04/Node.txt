@@ -1,4 +1,5 @@
 Feito no terminal NodeJS
+
 Welcome to Node.js v20.15.0.
 Type ".help" for more information.
 > var n1 = 1545.
