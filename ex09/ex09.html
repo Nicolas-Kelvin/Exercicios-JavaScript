@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verificação Nacionalidade</title>
+    <style>
+        body {
+            background-color: lightblue;
+        }
+        div#container {
+            margin: auto;
+            width: 500px;
+            height: 200px;
+            background-color: teal;
+            text-align: center;
+            border-radius: 3px;
+        }
+        div#resp{
+            font: normal 20px Arial;
+            margin-top: 20px;
+            text-align: center;
+        }
+        input {
+            background-color: greenyellow;
+            border-radius: 3px;
+            border-color: greenyellow;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="container">
+        <h1>Verificador de Nacionalidade</h1>
+        <form>
+            Qual a sua Nacionalidade:
+            <select id="slctnacio" name="Place">
+                <option id="argentina" value="ARG">Argentina</option>
+                <option id="australia" value="AUS">Austrália</option>
+                <option id="brasil" value="BRA">Brasil</option>
+                <option id="canada" value="CAN">Canadá</option>
+                <option id="china" value="CHN">China</option>
+                <option id="franca" value="FRA">França</option>
+                <option id="alemanha" value="GER">Alemanha</option>
+                <option id="india" value="IND">Índia</option>
+                <option id="italia" value="ITA">Itália</option>
+                <option id="japao" value="JPN">Japão</option>
+                <option id="mexico" value="MEX">México</option>
+                <option id="russia" value="RUS">Rússia</option>
+                <option id="africa_do_sul" value="RSA">África do Sul</option>
+                <option id="espanha" value="ESP">Espanha</option>
+                <option id="reino_unido" value="GBR">Reino Unido</option>
+                <option id="estados_unidos" value="EUA">Estados Unidos</option>
+            </select>
+            <input type="button" value="Verificar" onclick="validar()">
+            <div id="resp"></div>
+        </form>
+
+    </div>
+    <script>
+        function validar() {
+            // Obtém o elemento select
+            var select = document.getElementById("slctnacio");
+
+            // Obtém o valor da opção selecionada
+            var selecionado = select.value;
+
+            // Verifica se o valor selecionado é diferente de "EUA"
+            if (selecionado !== "EUA") {
+                document.getElementById("resp").textContent = "Você atualmente está no Estados Unidos ou seja, você é considerado Estrangeiro!";
+            } else {
+                document.getElementById("resp").textContent = "Você atualmente está no Estados Unidos ou seja, você é Americano!";
+            }
+        }
+    </script>
+
+</html>

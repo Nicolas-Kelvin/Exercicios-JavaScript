@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DETRAN</title>
+    <style>
+        body {
+            background-color: rgb(51, 47, 47);
+            text-align: center;
+        }
+        div#container {
+            margin: auto;
+            width: 500px;
+            height: 200px;
+            background-color: lightslategrey;
+            border-radius: 3px;
+        }
+        div#res {
+            margin: auto;
+            background-color: lightslategrey;
+            border-radius: 1px;
+        }
+        input#button{
+            background-color: green;
+            border-radius: 2px;
+            border-color: green;
+        border-color: green;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="container">
+        <h1>Sistema de Multas</h1>
+        Velocidade do carro: <input type="number" name="txtvel" id="txtvel">
+        <input id="button" type="button" value="Verificar" onclick="calcular()">
+        <div id="res"></div>
+    </div>
+    <script>
+        function calcular() {
+            // Seleciona o elemento de entrada de texto com id 'txtvel
+            var txtv = window.document.querySelector('input#txtvel')
+            // Seleciona o elemento de resultado com id 'res'
+            var res = window.document.querySelector('div#res')
+            // Converte o valor do campo de texto para número
+            var vel = Number(txtv.value)
+             // Exibe a velocidade atual inserida pelo usuário
+            res.innerHTML = `<p>Sua velocidade atual é de <strong>${vel}Km/h</strong></p>`
+            // Verifica se a velocidade é maior que 60 Km/h
+            if (vel > 60) {
+                // Se for maior, adiciona uma mensagem de multa
+                res.innerHTML += `<p>Você está <strong>MULTADO</strong> por excesso de velocidade</p>`
+            }
+            // Sempre adiciona uma mensagem de uso do cinto de segurança
+            res.innerHTML += `<p>Dirija sempre com o cinto de segurança!</p>`
+        }
+    </script>
+</body>
+</html>
