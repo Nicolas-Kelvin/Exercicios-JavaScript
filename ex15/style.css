@@ -1,5 +1,5 @@
 body {
-  background: rgb(91, 91, 211);
+  background: rgb(0,95,177);
   font: normal 15pt Arial;
 }
 
@@ -21,4 +21,13 @@ footer {
     color: white;
     text-align: center;
     font-style: italic;
+}
+
+input#verificar {
+    background-color: rgb(0,95,177);
+    border-radius: 5px;
+    border-color: rgb(0,95,177);
+    width: 100px;
+    height: 25px;
+
 }
